@@ -20,7 +20,7 @@ document.getElementById("check").addEventListener("click",(e)=>{
     }else{
         body.classList.toggle("red")
         setTimeout(() => {
-            body.classList.toggle("green");
+            body.classList.toggle("red");
             a.innerHTML = String(Math.floor(Math.random() * 100) + 1);
             b.innerHTML = `-${String(Math.floor(Math.random() * 100) + 1)}`;
         }, 2500)
