@@ -65,3 +65,11 @@ button{
 .red{
     background-color: red;
 }
+
+
+.box{
+    max-width: 80vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
