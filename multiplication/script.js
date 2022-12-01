@@ -1,0 +1,29 @@
+
+a = document.getElementById("a")
+b = document.getElementById("b")
+c = document.getElementById("c")
+body = document.getElementById("body")
+
+
+a.innerHTML = String(Math.floor(Math.random() * 100) + 1);
+b.innerHTML = `x${String(Math.floor(Math.random() * 100) + 1)}`;
+document.getElementById("check").addEventListener("click", (e) => {
+    console.log(b.innerText.replace('x', '') * parseInt(a.innerText));
+    if (parseInt(c.value) == (parseInt(a.innerText) * parseInt(b.innerText.replace('x', '')))) {
+        console.log("Correct");
+        body.classList.toggle("green")
+        setTimeout(() => {
+            body.classList.toggle("green");
+            a.innerHTML = String(Math.floor(Math.random() * 100) + 1);
+            b.innerHTML = `x${String(Math.floor(Math.random() * 100) + 1)}`;
+        }, 2500)
+    } else {
+        body.classList.toggle("red")
+        setTimeout(() => {
+            body.classList.toggle("red");
+            a.innerHTML = String(Math.floor(Math.random() * 100) + 1);
+            b.innerHTML = `x${String(Math.floor(Math.random() * 100) + 1)}`;
+        }, 2500)
+    }
+
+})
